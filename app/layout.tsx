@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -71,6 +72,11 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <Script
+          defer
+          src="https://umami-f1cs.onrender.com/script.js"
+          data-website-id="d68166c2-b589-4ad5-8214-d0747ca6a1b6"
+        />
       </body>
     </html>
   );
