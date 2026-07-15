@@ -9,7 +9,7 @@ export const siteConfig = {
   // TODO: replace with the client's real phone number
   phone: "(555) 555-5555",
   // TODO: replace with the client's real inbox address
-  email: "hello@bstrashbincleaning.com",
+  email: "info@bstrashbincleaning.com",
 } as const;
 
 export const navLinks = [
