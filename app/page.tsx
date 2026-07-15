@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { siteConfig } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 const services = [
   {
@@ -25,6 +26,7 @@ const services = [
     icon: MapPin,
     title: "Service Area",
     body: `Proudly serving neighborhoods across ${siteConfig.state}. Not sure if we reach you? Just ask.`,
+    href: "/service-area",
   },
 ];
 
@@ -73,19 +75,35 @@ export default function Home() {
       {/* Three-card services overview */}
       <section className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
         <div className="grid gap-6 md:grid-cols-3">
-          {services.map((service) => (
-            <Card key={service.title} className="border-border/60">
-              <CardHeader>
-                <div className="mb-2 flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <service.icon className="size-6" />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-                <CardDescription className="text-base text-muted-foreground">
-                  {service.body}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+          {services.map((service) => {
+            const card = (
+              <Card
+                className={cn(
+                  "h-full border-border/60",
+                  service.href &&
+                    "transition-colors hover:border-primary/50 hover:bg-primary/5"
+                )}
+              >
+                <CardHeader>
+                  <div className="mb-2 flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <service.icon className="size-6" />
+                  </div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardDescription className="text-base text-muted-foreground">
+                    {service.body}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            );
+
+            return service.href ? (
+              <Link key={service.title} href={service.href} className="block">
+                {card}
+              </Link>
+            ) : (
+              <div key={service.title}>{card}</div>
+            );
+          })}
         </div>
       </section>
 
