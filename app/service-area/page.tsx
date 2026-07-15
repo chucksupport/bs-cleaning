@@ -7,18 +7,19 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Service Area",
-  description: `B's Trash Bin Cleaning serves cities across ${siteConfig.state}. Don't see yours? Ask anyway.`,
+  description: `B's Trash Bin Cleaning serves Wadsworth, Akron, Medina, and neighboring ${siteConfig.state} suburbs in the greater Akron area. Don't see yours? Ask anyway.`,
 };
 
-// TODO: replace with the client's ACTUAL service area. These are placeholder
-// Ohio cities — confirm the real coverage before launch.
 const cities = [
-  "Columbus",
-  "Cleveland",
-  "Cincinnati",
+  "Wadsworth",
+  "Norton",
+  "Barberton",
+  "Rittman",
+  "New Franklin",
+  "Doylestown",
+  "Medina",
+  "Copley",
   "Akron",
-  "Dayton",
-  "Toledo",
 ];
 
 export default function ServiceAreaPage() {
@@ -30,16 +31,13 @@ export default function ServiceAreaPage() {
             Service <span className="text-primary">Area</span>
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            We proudly serve communities throughout {siteConfig.state}. Here are
-            some of the cities we cover.
+            We proudly serve the greater Akron area and surrounding{" "}
+            {siteConfig.state} suburbs. Here are some of the cities we cover.
           </p>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
-        <div className="mb-6 rounded-xl border border-dashed border-primary/40 bg-primary/5 p-4 text-sm text-primary">
-          Placeholder city list — replace with the real service area.
-        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cities.map((city) => (
             <div

@@ -8,18 +8,19 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Trash bin cleaning and full-service pressure washing — driveways, sidewalks, patios, decks, fences, siding and more across Ohio.",
+    "Trash bin cleaning and full-service pressure washing — driveways, sidewalks, patios, decks, fences, siding and more across Northeast Ohio.",
 };
 
 const pressureWashingSubServices = [
+  "House siding",
   "Driveways",
   "Sidewalks & walkways",
   "Patios",
-  "Decks",
-  "Fences",
-  "House siding",
-  "Garage floors",
-  "Pool decks",
+  "Vinyl Fences",
+  "Dumpster Pads",
+  "Parking Lots",
+  "Commercial Buildings",
+  "Storefronts",
 ];
 
 const steps = [
@@ -54,15 +55,16 @@ export default function ServicesPage() {
               Trash Bin Cleaning
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Your garbage and recycling cans are a breeding ground for bacteria,
-              mold, and odors. We blast them clean with high-pressure hot water,
+              Your garbage and recycling cans are a breeding ground for bacteria
+              and odors. We blast them clean with high-pressure hot water,
               then sanitize and deodorize so they look — and smell — brand new.
             </p>
           </div>
           <div className="grid content-start gap-4">
             <Detail title="What's included">
-              Hot-water pressure wash, sanitizing treatment, deodorizing, and a
-              quick exterior rinse — bins left ready to roll back.
+              Sanitized with a 200-degree water, high-pressure wash system that
+              kills 99.9% of germs &amp; bacteria. Our goal is simple: make the
+              process convenient, reliable, and hassle-free.
             </Detail>
             <Detail title="Why it matters">
               Kills the germs and knocks out the smell that draws flies, maggots,
@@ -85,9 +87,10 @@ export default function ServicesPage() {
                 Pressure Washing
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Dirt, algae, mildew, and years of grime don&apos;t stand a
-                chance. We restore your hard surfaces and bring back the curb
-                appeal that makes your place pop.
+                Restore the beauty of your home or business with professional
+                pressure washing. We safely remove dirt, mold, mildew, algae,
+                and years of built-up grime to leave your property looking like
+                new.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-2">
                 {pressureWashingSubServices.map((item) => (
@@ -102,8 +105,8 @@ export default function ServicesPage() {
             </div>
             <div className="grid content-start gap-4">
               <Detail title="What's included">
-                Surface-appropriate pressure or soft-washing, spot treatment for
-                stubborn stains, and a clean rinse-down.
+                From soft wash techniques that protect delicate surfaces to
+                power washing that removes tough stains, we have you covered.
               </Detail>
               <Detail title="Why it matters">
                 Boosts curb appeal, protects your surfaces from long-term damage,

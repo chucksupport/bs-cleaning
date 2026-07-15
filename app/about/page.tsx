@@ -1,116 +1,93 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Leaf, ShieldCheck, Sparkles } from "lucide-react";
+import { Droplets, MapPin, Trash2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Meet the woman-owned team behind B's Trash Bin Cleaning, proudly serving ${siteConfig.state}.`,
+  description: `Locally owned and proudly serving ${siteConfig.state} — professional trash bin cleaning and pressure washing from B's Trash Bin Cleaning.`,
 };
-
-const credentials = [
-  {
-    icon: ShieldCheck,
-    title: "Insured & professional",
-    // TODO: confirm exact licensing / insurance credentials with the client.
-    body: "Fully insured and treating every property with care and respect.",
-  },
-  {
-    icon: Leaf,
-    title: "Eco-conscious",
-    body: "Biodegradable solutions and responsible water use on every job.",
-  },
-  {
-    icon: Sparkles,
-    title: "Detail-obsessed",
-    body: "We're not happy until it's spotless — guaranteed.",
-  },
-];
 
 export default function AboutPage() {
   return (
     <>
+      {/* Mission */}
       <section className="border-b border-border/60">
-        <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
+        <div className="mx-auto w-full max-w-4xl px-4 py-24 sm:px-6">
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl">
             About <span className="text-primary">B&apos;s</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            A woman-owned local business on a mission to make {siteConfig.state}{" "}
-            cleaner, one bin (and driveway) at a time.
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
+            At B&apos;s Trash Bin Cleaning, we&apos;re dedicated to transforming
+            properties &amp; trash bins with our professional pressure washing
+            and bin cleaning services. Whether you&apos;re looking to enhance
+            your home&apos;s curb appeal or have a dirty trash bin, our team is
+            here to handle all your exterior cleaning needs with expertise and
+            care.
           </p>
+          {/* TODO: Founder story from Bri — insert when she provides it */}
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-3xl px-4 py-20 sm:px-6">
-        {/* ============================================================
-            TODO (PLACEHOLDER STORY): Replace the copy below with B's real
-            story — how she started, what she cares about, why customers
-            should trust her. This is dummy text written to set the tone.
-            ============================================================ */}
-        <div className="rounded-xl border border-dashed border-primary/40 bg-primary/5 p-4 text-sm text-primary">
-          Placeholder story — swap in the owner&apos;s real bio before launch.
-        </div>
-        <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/90">
-          <p>
-            B&apos;s Trash Bin Cleaning started with a simple frustration: trash
-            cans are disgusting, and nobody wants to scrub them. So B decided to
-            do something about it — for the whole neighborhood.
-          </p>
-          <p>
-            What began as a one-woman operation with a pressure washer and a lot
-            of hustle has grown into a trusted local service. Every job gets the
-            same care, whether it&apos;s a single bin or a full driveway
-            makeover.
-          </p>
-          <p>
-            When you book with B&apos;s, you&apos;re supporting a local,
-            woman-owned business that genuinely cares about doing right by its
-            customers and its community.
-          </p>
-        </div>
-      </section>
-
-      <section className="border-y border-border/60 bg-[#0a0a0a]">
-        <div className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-20 sm:px-6 md:grid-cols-3">
-          {credentials.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-xl border border-border/60 bg-background p-6"
-            >
-              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <item.icon className="size-6" />
-              </div>
-              <h3 className="text-lg font-bold">{item.title}</h3>
-              <p className="mt-2 text-muted-foreground">{item.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* What we do */}
       <section className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
-        <div className="grid gap-8 md:grid-cols-2 md:items-center">
-          <div>
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Proudly serving {siteConfig.state}
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-xl border border-border/60 bg-card p-8">
+            <div className="mb-4 flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <Trash2 className="size-7" />
+            </div>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+              How we clean bins
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We cover communities across {siteConfig.state} and the surrounding
-              areas. Wherever you are, if your bins need love or your driveway
-              needs a refresh, we&apos;d be glad to help. Check our service area
-              or just reach out — we&apos;re friendly.
+              Sanitized with a 200-degree water, high-pressure wash system that
+              kills 99.9% of germs and bacteria. Our goal is simple: make the
+              process convenient, reliable, and hassle-free.
             </p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
-            <Button asChild size="xl">
-              <Link href="/contact">Get a Free Quote</Link>
-            </Button>
-            <Button asChild size="xl" variant="outline">
-              <Link href="/service-area">See Service Area</Link>
-            </Button>
+          <div className="rounded-xl border border-border/60 bg-card p-8">
+            <div className="mb-4 flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <Droplets className="size-7" />
+            </div>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+              Our pressure washing range
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              From soft wash techniques that protect delicate surfaces to power
+              washing that removes tough stains, we have you covered.
+            </p>
           </div>
+        </div>
+      </section>
+
+      {/* Where we serve */}
+      <section className="border-y border-border/60 bg-[#0a0a0a]">
+        <div className="mx-auto w-full max-w-4xl px-4 py-20 text-center sm:px-6">
+          <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <MapPin className="size-7" />
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Where we serve
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Locally owned and serving Northeast Ohio — Wadsworth, Norton,
+            Barberton, Rittman, New Franklin, Doylestown, Medina, Copley, Akron,
+            and the surrounding communities.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+            Ready for cleaner bins or a fresher property?
+          </h2>
+          <Button asChild size="xl">
+            <Link href="/contact">Get a Free Quote</Link>
+          </Button>
         </div>
       </section>
     </>

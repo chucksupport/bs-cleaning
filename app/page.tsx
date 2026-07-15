@@ -48,14 +48,16 @@ export default function Home() {
             Woman-owned · {siteConfig.state}
           </span>
           <h1 className="max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            Bins so clean
+            Unmatched pressure washing
             <br />
-            you&apos;d <span className="text-primary">eat off them.</span>
+            <span className="text-primary">&amp; bin cleaning.</span>
           </h1>
           <p className="max-w-xl text-lg text-muted-foreground sm:text-xl">
-            Professional trash bin cleaning and pressure washing across{" "}
-            {siteConfig.state}. We blast away the grime, germs, and stink so you
-            don&apos;t have to.
+            At B&apos;s Trash Bin Cleaning, we&apos;re dedicated to transforming
+            properties &amp; trash bins with our professional pressure washing /
+            bin cleaning services. Whether you&apos;re looking to enhance your
+            home&apos;s curb appeal or have a dirty trash bin, our team is here
+            to handle all your exterior cleaning needs with expertise and care.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button asChild size="xl">
