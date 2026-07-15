@@ -54,7 +54,7 @@ export function OgImage(): ReactElement {
           color: "#a3a3a3",
         }}
       >
-        Trash bin cleaning &amp; pressure washing in Ohio
+        Trash bin cleaning &amp; pressure washing in Northeast Ohio
       </div>
     </div>
   );

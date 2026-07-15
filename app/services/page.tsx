@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Trash bin cleaning and full-service pressure washing — driveways, sidewalks, patios, decks, fences, siding and more across Ohio.",
+    "Trash bin cleaning and full-service pressure washing — driveways, sidewalks, patios, decks, fences, siding and more across Northeast Ohio.",
 };
 
 const pressureWashingSubServices = [

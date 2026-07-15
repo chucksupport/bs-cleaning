@@ -3,9 +3,9 @@ export const siteConfig = {
   name: "B's Trash Bin Cleaning",
   tagline: "Pressure Washing Services",
   description:
-    "Professional trash bin cleaning and pressure washing in Ohio.",
+    "Professional trash bin cleaning and pressure washing in Northeast Ohio.",
   url: "https://bstrashbincleaning.com",
-  state: "Ohio",
+  state: "Northeast Ohio",
   // TODO: replace with the client's real phone number
   phone: "(555) 555-5555",
   // TODO: replace with the client's real inbox address

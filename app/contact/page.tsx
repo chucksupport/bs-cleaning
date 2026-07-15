@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a free quote for trash bin cleaning or pressure washing in Ohio. We'll be in touch fast.",
+    "Request a free quote for trash bin cleaning or pressure washing in Northeast Ohio. We'll be in touch fast.",
 };
 
 export default function ContactPage() {
