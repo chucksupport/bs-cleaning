@@ -54,8 +54,8 @@ export default function ServicesPage() {
               Trash Bin Cleaning
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Your garbage and recycling cans are a breeding ground for bacteria,
-              mold, and odors. We blast them clean with high-pressure hot water,
+              Your garbage and recycling cans are a breeding ground for bacteria
+              and odors. We blast them clean with high-pressure hot water,
               then sanitize and deodorize so they look — and smell — brand new.
             </p>
           </div>
